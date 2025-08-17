@@ -1,0 +1,149 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--primary-slate-blue) 0%, var(--primary-charcoal) 100%);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: var(--spacing-sm) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--primary-pure-white);
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo-tagline {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-ui);
+  color: var(--primary-pure-white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-teal);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--primary-teal);
+  background-color: rgba(98, 146, 158, 0.15);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: var(--primary-teal);
+  border-radius: 1px;
+}
+
+.nav-cta {
+  margin-left: var(--spacing-sm);
+  font-size: 0.9rem;
+  padding: var(--spacing-xs) var(--spacing-md);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  color: var(--primary-pure-white);
+  padding: var(--spacing-xs);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--primary-slate-blue) 0%, var(--primary-charcoal) 100%);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-lg) 0;
+    gap: var(--spacing-md);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-link {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: var(--spacing-sm);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    width: 80%;
+    justify-content: center;
+  }
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+  padding-top: 80px;
+}

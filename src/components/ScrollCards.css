@@ -1,0 +1,265 @@
+.scroll-cards-main {
+  background: linear-gradient(135deg, var(--primary-warm-grey) 0%, var(--primary-slate-blue) 50%, var(--primary-charcoal) 100%);
+  position: relative;
+  padding-bottom: 0;
+}
+
+.scroll-section-header {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.scroll-section-title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-slate-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.scroll-section-title .highlight {
+  background: linear-gradient(135deg, var(--primary-pure-white) 0%, var(--primary-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.scroll-section-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.scroll-card-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  padding: 0;
+}
+
+.scroll-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 60px;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--primary-warm-grey) 0%, var(--primary-pure-white) 50%, var(--primary-warm-grey) 100%);
+  backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  transform-origin: top;
+  box-shadow: none;
+  margin: 0;
+}
+
+.scroll-card h2 {
+  text-align: center;
+  margin: 0 0 50px 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-slate-blue) 0%, var(--primary-charcoal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scroll-card-body {
+  display: flex;
+  height: 100%;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.scroll-card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.scroll-card-description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-secondary);
+  text-shadow: none;
+}
+
+.scroll-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(98, 146, 158, 0.15);
+  border-radius: 50%;
+  color: var(--primary-teal);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(98, 146, 158, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.scroll-card-icon:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: scale(1.1);
+}
+
+.scroll-card-image-container {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.scroll-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+  padding: 15px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.scroll-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.scroll-card-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.scroll-feature-tag {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .scroll-card {
+    padding: 60px 40px;
+  }
+  
+  .scroll-card h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .scroll-card-body {
+    gap: 60px;
+    max-width: 1000px;
+  }
+  
+  .scroll-card-description p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-section-title {
+    font-size: 2.8rem;
+  }
+  
+  .scroll-section-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .scroll-card {
+    padding: 40px 20px;
+  }
+  
+  .scroll-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .scroll-card-body {
+    flex-direction: column;
+    gap: 30px;
+    max-width: none;
+  }
+  
+  .scroll-card-description p {
+    font-size: 1rem;
+  }
+  
+  .scroll-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+  }
+  
+  .scroll-card-image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-section-title {
+    font-size: 2.2rem;
+  }
+  
+  .scroll-section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .scroll-card {
+    padding: 30px 15px;
+  }
+  
+  .scroll-card h2 {
+    font-size: 2rem;
+  }
+  
+  .scroll-card-description p {
+    font-size: 0.9rem;
+  }
+  
+  .scroll-card-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .scroll-card-image-container {
+    height: 180px;
+  }
+}
